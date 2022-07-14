@@ -418,9 +418,8 @@
            }
     
     .social-icon {
-      fill: #AFB1B8;
-     
-          }
+      fill: var(--icon-color);
+           }
 
     .social-icon:hover, .social-icon:focus {
       background-color: var(--accent-color);
