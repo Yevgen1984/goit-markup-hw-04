@@ -175,10 +175,16 @@
     color: var(--accent-color);
     }
 
+    .link.mail, .link.tel {
+      display: flex;
+      align-items: center;
+    } 
+    
     .contact-icons {
       width: 16px;
-      height: 16px;
-      
+      height: 12px;
+      fill: currentColor;
+
     }
 
     .contact-item  {
@@ -191,9 +197,7 @@
       margin-right: 10px;
     }
 
-     .contact-icon:hover > li.contact-item svg {
-      fill: var(--accent-color);
-    }
+    
 
     /*hero*/
 
@@ -399,14 +403,33 @@
       line-height: 1.17;
      }
 
-     .container-icons {
+     
+     .social {
       display: flex;
-      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 30px;
      }
 
-     .team-members-icons {
-      display: flex;
+      .social-item {
+      width: 20px;
+      height: 20px;
+      fill: var(--icon-color);
+      
      }
+
+     
+     
+     /*.contact-icons {
+      width: 16px;
+      height: 16px;
+      
+    }
+
+    .contact-item  {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+    }*/
 
     /*footer*/
 

@@ -18,7 +18,8 @@ html {
     --studio-text-color: #000000;
     --portfolio-border-color: #ECECEC;
     --border-line-color:#ECECEC;
-    --project-line-color: #EEEEEE;}
+    --project-line-color: #EEEEEE;
+    --icon-color:#AFB1B8;}
 
 li {
     list-style:
