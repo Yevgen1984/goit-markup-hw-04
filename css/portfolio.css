@@ -163,6 +163,24 @@ address {
       color: var(--accent-color);
       }
   
+      .contact-icons {
+        width: 16px;
+        height: 12px;
+        fill: currentColor;
+        }
+
+      .contact-item  {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+      }
+  
+      .contact-icons {
+       margin-right: 10px;
+       vertical-align: middle;
+      }
+
+      
     /*main*/
 
     .section {
