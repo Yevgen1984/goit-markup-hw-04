@@ -372,13 +372,11 @@ address {
 }
 
 .social-invite {
-  
-  margin-bottom: 20;
-  padding: 0;
   color:var(--primary-background-color);
   font-size: 14px;
   line-height: 1.14;
-  
+  margin-bottom: 20;
+  padding: 0;
 
 }
 
@@ -398,12 +396,19 @@ address {
 }
 
 .social.icon-list {
-  display: flex;
   margin-bottom: 0;
-  margin-top: 0;
 }
 
-.social-icon:hover, .social-icon:focus {
+.social.icon-list .social-icon {
+  fill: var(--secondary-text-color);
+}
+
+.social.icon-list .social-link-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.social.icon-list .social-link-item:hover, .social.icon-list .social-link-item:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
 }

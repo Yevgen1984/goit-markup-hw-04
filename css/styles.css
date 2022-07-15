@@ -417,15 +417,22 @@
         cursor: pointer;
       }
     
-    .social-icon {
-      fill: var(--icon-color);
-           }
-
-    .social-icon:hover, .social-icon:focus {
-      background-color: var(--accent-color);
-      fill: var(--secondary-text-color);
+    
+    .social-link-item {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: #AFB1B8;
     }
 
+    .social-link-item:hover,
+    .social-link-item:focus {
+      background-color: var(--accent-color);
+      fill: var(--secondary-text-color);
+      border-radius: 50%;
+    }
      
      
      /*customers*/
@@ -434,34 +441,33 @@
       text-align: center;
     }
 
-     .label-list {
-     display: flex;
-     justify-content: space-between;
-     }
-
-     .social-icon {
-      align-items: center;
-      padding-left: auto;
-      padding-right: auto;
-     }
-
-     .social-link-icon {
-      border: 1px solid var(--icon-color);
-      border-radius: 4px;
-      
-      align-items: center;
-
-     }
-
-     .label-container {
+    
+     .label-item {
       width: 170px;
       height: 92px;
-      border: 1px solid var(--icon-color);
-      border-radius: 4px;
-      
+      display: flex;
+      justify-content: center;
       align-items: center;
+      outline: 2px solid var(--contact-text-color);
+      
      }
 
+     .label-list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+     }
+
+      .social-link-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: #AFB1B8;
+    } 
+
+    
     /*footer*/
 
     .basement {
@@ -565,7 +571,16 @@
       margin-bottom: 0;
     }
     
-    .social-icon:hover, .social-icon:focus {
+    .social.icon-list .social-icon {
+      fill: var(--secondary-text-color);
+    }
+
+    .social.icon-list .social-link-item {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .social.icon-list .social-link-item:hover, .social.icon-list .social-link-item:focus {
       background-color: var(--accent-color);
       border-radius: 50%;
     }
