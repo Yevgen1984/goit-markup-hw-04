@@ -390,7 +390,8 @@
     }
 
     .team-position {
-      padding-bottom: 30px;
+      /*padding-bottom: 30px;*/
+      padding-bottom: 16px;
 
       color: var(--contact-text-color);
       font-size: 16px;
@@ -412,9 +413,13 @@
         width: 44px;
         height: 44px;
         cursor: pointer;
+        
       }
     
-    
+      .social-item:not(:last-child) {
+        margin-right: 8px;
+      }
+
     .social-link-item {
       width: 44px;
       height: 44px;
@@ -429,8 +434,8 @@
       background-color: var(--accent-color);
       fill: var(--secondary-text-color);
       border-radius: 50%;
-    }
-     
+      }
+    
     .social-icon:hover, .social-icon:focus{
       fill: var(--secondary-text-color);
     }
