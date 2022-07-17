@@ -79,7 +79,6 @@
       padding-right: 15px;
     }
        
-
      /*nav*/
     
   
@@ -89,18 +88,41 @@
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 93px;
-  }
+    
+    }
+       
 
     .site-nav .link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+    
    }
 
    .site-nav .link.current {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
     }
+
+    
+    .site-nav .link.current::after {
+      display: inline-block;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 4px;
+      top: 100%;
+      right:0%;
+      transform: translate(-0%, -100%);
+      
+      
+      background-color: var(--accent-color);
+      border-radius: 2px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    
 
    .site-nav .item + .item {
     margin-left: 50px;
@@ -118,8 +140,8 @@
 
    .contacts .link {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
    }
 
    .contacts .item + .item {
@@ -159,8 +181,9 @@
 
     .site-nav .link.current:hover,
     .site-nav .link.current:focus
-    {color:var(--primary-background-color);
-    background-color:var(--accent-color);}
+    {color:var(--accent-color);
+    
+    }
 
 
     .contacts .link {
@@ -210,7 +233,6 @@
     .section.hero {
       padding-top: 200px;
       padding-bottom: 200px;
-      /*background-color: var(--secondary-background-color)*/
     }
 
     .overlay {
@@ -295,19 +317,17 @@
     
     .feature-item {
       width: 270px;
-      
-      /*margin-right: 30px;*/
       }
 
       .thumb {
         padding: 25px 100px;
       }
+
       .thumb {
         display: block;
         height: 120px;
         background-color: #F5F4FA;
         margin-bottom: 30px;
-
       }
     
     
@@ -339,13 +359,44 @@
      .work-item {
        flex-basis: calc((100% - 60px) / 3); 
        margin-right: 30px;
+       position: relative;
      }
 
      .work-item:last-child {
       margin-right: 0px;
      }
 
-      /*team*/
+      .work-item-thumb {
+      display: inline-block;
+      position: relative;
+      }
+
+    .work-item-text {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 70px;
+      top: 100%;
+      left: 100%;
+      
+      transform: translate(-100%,-100%);
+      color: var(--secondary-text-color);
+      background-color: rgba(47, 48, 58, 0.8);
+      }
+
+    .work-item-title {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-bottom: 0;
+      transform: translate(-50%,-50%);
+
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      }
+           /*team*/
     
     
     .team .section-title {
@@ -390,7 +441,6 @@
     }
 
     .team-position {
-      /*padding-bottom: 30px;*/
       padding-bottom: 16px;
 
       color: var(--contact-text-color);
@@ -407,13 +457,12 @@
       display: flex;
       justify-content: center;
       margin-bottom: 30px;
-           }
+      }
 
       .social-item {
         width: 44px;
         height: 44px;
         cursor: pointer;
-        
       }
     
       .social-item:not(:last-child) {
@@ -458,11 +507,18 @@
       justify-content: center;
       align-items: center;
       border: 2px solid var(--contact-text-color);
+      border-radius: 4px;
     }
       
       .label-item:hover, .label-item:focus {
        border-color: var(--accent-color);
-    }
+       cursor: pointer;
+       }
+
+       .label-item:hover .social-icon {
+        fill: var(--accent-color);
+        cursor: pointer;
+       }
 
      .label-list {
       display: flex;
@@ -471,8 +527,6 @@
      }
 
       .social-icon {
-      /*width: 44px;
-      height: 44px;*/
       display: flex;
       justify-content: center;
       align-items: center;
@@ -481,6 +535,7 @@
     
       .label-item .social-icon:hover, .label-item .social-icon:focus {
         fill: var(--accent-color);
+        cursor: pointer;
       }
     /*footer*/
 

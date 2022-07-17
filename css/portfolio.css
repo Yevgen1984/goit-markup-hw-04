@@ -86,10 +86,34 @@ address {
      }
   
      .site-nav .link.current {
-      padding-top: 0;
-      padding-bottom: 0;
+      padding-top: 32px;
+      padding-bottom: 32px;
       }
   
+
+      .site-nav .link.current {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        position: relative;
+        }
+    
+        
+        .site-nav .link.current::after {
+          display: inline-block;
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 4px;
+          top: 100%;
+          right:0%;
+          transform: translate(-0%, -100%);
+          
+          
+          background-color: var(--accent-color);
+          border-radius: 2px;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
      .site-nav .item + .item {
       margin-left: 50px;
      }
@@ -147,8 +171,9 @@ address {
   
       .site-nav .link.current:hover,
       .site-nav .link.current:focus
-      {color:var(--primary-background-color);
-      background-color:var(--accent-color);}
+      {
+        color:var(--accent-color);
+      }
   
   
       .contacts .link {
@@ -272,6 +297,76 @@ address {
     .project-item:nth-child(3n) {
         margin-right: 0px;
     }
+
+    .project-thumb {
+      display: inline-block;
+      position: relative;
+    }
+
+    .project-thumb::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: translate(0%, 0%);
+      background-color: rgba(33, 150, 243, 0.9);
+     opacity: 0;
+
+    }
+
+    .project-thumb:hover::before {
+      opacity: 1;
+    }
+
+    .project-item-descr {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: translate(0%, -100%);
+      }
+
+    .project-item-text {
+      /*display: inline-block;*/
+      position: absolute;
+      width: 322px;
+      height: 168px;
+      margin-bottom: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.55;
+      vertical-align: top;
+      color: var(--secondary-text-color);
+      opacity: 0;
+    }
+
+
+    .project-item-text:hover .project-item-descr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(33, 150, 243, 0.9);
+      transform: translatex(-100%);
+      transition: transform 2s ease;
+    }
+
+      
+     .project-thumb:hover .project-item-text { 
+      opacity: 1; 
+      
+    } 
+
+    
+
+
+
 
     .project-item:hover, .project-item:focus {
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
