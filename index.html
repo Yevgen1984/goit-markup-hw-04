@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/1.1.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/styles.css"/>
   </head>
 
@@ -69,9 +70,15 @@
 
       <main>
       <section class="section hero overlay">
+        
         <div class="container">
+          
           <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <button type="button" class="button">Заказать услугу</button>
+        
+          <button type="button" class="button" data-modal-open>Заказать услугу</button>
+         
+          
+         
         </div>
       </section>
       
@@ -378,6 +385,22 @@
         </div>
 
         </footer>
+
+        <div class="backdrop is-hidden" data-modal>
+          
+         
+           
+          <div class="modal">
+          
+        
+          <button class = "data-modal-close" data-modal-close> <svg class="modal-icon-item">
+            <use href="../images/icons.svg#icon-close-black" width="18px" height="18px" class="modal-icon"></use>
+          </svg></button>
+
+        </div>
+      </div>
+        <script src="./js/modal.js"></script>
+
         </body>
         </html>
 
